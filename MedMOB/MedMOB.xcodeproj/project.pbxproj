@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB9ACD28183957EB003CB03F /* Medico.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9ACD27183957EB003CB03F /* Medico.m */; };
 		EB32A359183955240010E1D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A358183955240010E1D5 /* Foundation.framework */; };
 		EB32A35B183955240010E1D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35A183955240010E1D5 /* CoreGraphics.framework */; };
 		EB32A35D183955240010E1D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35C183955240010E1D5 /* UIKit.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB9ACD26183957EB003CB03F /* Medico.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Medico.h; sourceTree = "<group>"; };
+		DB9ACD27183957EB003CB03F /* Medico.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Medico.m; sourceTree = "<group>"; };
 		EB32A355183955240010E1D5 /* MedMOB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMOB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB32A358183955240010E1D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB32A35A183955240010E1D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,8 @@
 		EB7DA2E81839562000B45B23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DB9ACD26183957EB003CB03F /* Medico.h */,
+				DB9ACD27183957EB003CB03F /* Medico.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			files = (
 				EB32A369183955240010E1D5 /* AppDelegate.m in Sources */,
 				EB32A365183955240010E1D5 /* main.m in Sources */,
+				DB9ACD28183957EB003CB03F /* Medico.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

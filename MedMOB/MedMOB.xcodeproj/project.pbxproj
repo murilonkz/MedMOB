@@ -19,6 +19,8 @@
 		EB32A374183955240010E1D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35C183955240010E1D5 /* UIKit.framework */; };
 		EB32A37C183955240010E1D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB32A37A183955240010E1D5 /* InfoPlist.strings */; };
 		EB32A37E183955240010E1D5 /* MedMOBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB32A37D183955240010E1D5 /* MedMOBTests.m */; };
+		EB7DA2EE1839566200B45B23 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DA2EC1839566200B45B23 /* MainViewController.m */; };
+		EB7DA2EF1839566200B45B23 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7DA2ED1839566200B45B23 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		EB32A379183955240010E1D5 /* MedMOBTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MedMOBTests-Info.plist"; sourceTree = "<group>"; };
 		EB32A37B183955240010E1D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EB32A37D183955240010E1D5 /* MedMOBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedMOBTests.m; sourceTree = "<group>"; };
+		EB7DA2EB1839566200B45B23 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EB7DA2EC1839566200B45B23 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EB7DA2ED1839566200B45B23 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,9 @@
 		EB32A35E183955240010E1D5 /* MedMOB */ = {
 			isa = PBXGroup;
 			children = (
+				EB7DA2EA1839562A00B45B23 /* Controller */,
+				EB7DA2E91839562400B45B23 /* View */,
+				EB7DA2E81839562000B45B23 /* Model */,
 				EB32A367183955240010E1D5 /* AppDelegate.h */,
 				EB32A368183955240010E1D5 /* AppDelegate.m */,
 				EB32A36A183955240010E1D5 /* Images.xcassets */,
@@ -142,6 +150,30 @@
 				EB32A37A183955240010E1D5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB7DA2E81839562000B45B23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EB7DA2E91839562400B45B23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB7DA2ED1839566200B45B23 /* MainViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EB7DA2EA1839562A00B45B23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB7DA2EB1839566200B45B23 /* MainViewController.h */,
+				EB7DA2EC1839566200B45B23 /* MainViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB32A363183955240010E1D5 /* InfoPlist.strings in Resources */,
+				EB7DA2EF1839566200B45B23 /* MainViewController.xib in Resources */,
 				EB32A36B183955240010E1D5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB32A369183955240010E1D5 /* AppDelegate.m in Sources */,
+				EB7DA2EE1839566200B45B23 /* MainViewController.m in Sources */,
 				EB32A365183955240010E1D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +475,7 @@
 				EB32A383183955240010E1D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB32A384183955240010E1D5 /* Build configuration list for PBXNativeTarget "MedMOBTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +484,7 @@
 				EB32A386183955240010E1D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "IndexViewController.h"
 
 @implementation AppDelegate
 
@@ -14,7 +15,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    IndexViewController *index = [[IndexViewController alloc]init];
+    [[self window]setRootViewController:index];
     [self.window makeKeyAndVisible];
     return YES;
 }

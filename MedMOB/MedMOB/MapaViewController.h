@@ -13,7 +13,7 @@
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
-@property (weak, nonatomic) IBOutlet MKMapView *mapa;
+@property (strong, nonatomic) IBOutlet MKMapView *mapa;
 
 - (IBAction)getCurrentLocation:(id)sender;
 @end

@@ -33,11 +33,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     locationManager = [[CLLocationManager alloc] init];
-    //mapa = [[MKMapView alloc]initWithFrame:self.view.bounds];
+    mapa = [[MKMapView alloc]initWithFrame:self.view.bounds];
     mapa.showsUserLocation = YES;
     mapa.mapType = MKMapTypeHybrid;
     mapa.delegate = self;
-    //[self.view addSubview:mapa];
+    [self.view addSubview:mapa];
 }
 
 - (void)didReceiveMemoryWarning

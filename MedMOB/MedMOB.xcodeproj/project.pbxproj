@@ -14,6 +14,7 @@
 		DBEBEABF183D5B7B00DE406A /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */; };
 		DBEBEAD0183D719D00DE406A /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEBEACE183D719D00DE406A /* RMDateSelectionViewController.m */; };
 		DBEBEAD1183D719D00DE406A /* RMDateSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEBEACF183D719D00DE406A /* RMDateSelectionViewController.xib */; };
+		DBEBEAD5183E5ECB00DE406A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEBEAD4183E5ECB00DE406A /* MapKit.framework */; };
 		EB32A359183955240010E1D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A358183955240010E1D5 /* Foundation.framework */; };
 		EB32A35B183955240010E1D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35A183955240010E1D5 /* CoreGraphics.framework */; };
 		EB32A35D183955240010E1D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35C183955240010E1D5 /* UIKit.framework */; };
@@ -50,6 +51,7 @@
 		DBEBEACD183D719D00DE406A /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDateSelectionViewController.h; sourceTree = "<group>"; };
 		DBEBEACE183D719D00DE406A /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDateSelectionViewController.m; sourceTree = "<group>"; };
 		DBEBEACF183D719D00DE406A /* RMDateSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDateSelectionViewController.xib; sourceTree = "<group>"; };
+		DBEBEAD4183E5ECB00DE406A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EB32A355183955240010E1D5 /* MedMOB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMOB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB32A358183955240010E1D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB32A35A183955240010E1D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +77,7 @@
 			files = (
 				EB32A35B183955240010E1D5 /* CoreGraphics.framework in Frameworks */,
 				EB32A35D183955240010E1D5 /* UIKit.framework in Frameworks */,
+				DBEBEAD5183E5ECB00DE406A /* MapKit.framework in Frameworks */,
 				EB32A359183955240010E1D5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +117,7 @@
 		EB32A357183955240010E1D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBEBEAD4183E5ECB00DE406A /* MapKit.framework */,
 				EB32A358183955240010E1D5 /* Foundation.framework */,
 				EB32A35A183955240010E1D5 /* CoreGraphics.framework */,
 				EB32A35C183955240010E1D5 /* UIKit.framework */,
@@ -244,6 +248,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Murilo Campaner";
 				TargetAttributes = {
+					EB32A354183955240010E1D5 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					EB32A36F183955240010E1D5 = {
 						TestTargetID = EB32A354183955240010E1D5;
 					};

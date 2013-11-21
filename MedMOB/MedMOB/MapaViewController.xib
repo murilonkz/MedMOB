@@ -52,7 +52,7 @@
                         <action selector="getCurrentLocation:" destination="-1" eventType="touchUpInside" id="bxw-5A-dmD"/>
                     </connections>
                 </button>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-JC-Ocd">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4tz-JC-Ocd">
                     <rect key="frame" x="20" y="20" width="280" height="433"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </mapView>

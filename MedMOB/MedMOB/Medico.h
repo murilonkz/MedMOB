@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface Medico : NSObject
-
+@property NSArray *especialidades;
+@property NSString *nome;
+@property NSString *endereco;
+@property NSString *telefone;
+@property NSString *latitude;
+@property NSString *longitude;
 @end

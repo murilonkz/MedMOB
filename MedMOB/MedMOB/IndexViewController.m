@@ -8,6 +8,7 @@
 
 #import "IndexViewController.h"
 #import "RMDateSelectionViewController.h"
+#import "MapaViewController.h"
 
 @interface IndexViewController ()
 
@@ -46,6 +47,12 @@
     
     [dateSelectionVC show];
     
+}
+
+- (IBAction)mapa:(id)sender {
+    ViewController *map = [[ViewController alloc]init];
+    [map setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:map animated:YES completion:nil];
 }
 
 - (void)selectionViewController:(RMDateSelectionViewController *)vc didSelectOption:(NSString *)option {

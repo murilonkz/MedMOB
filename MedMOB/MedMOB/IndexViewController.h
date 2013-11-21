@@ -10,5 +10,6 @@
 
 @interface IndexViewController : UIViewController
 - (IBAction)callModal:(id)sender;
+- (IBAction)mapa:(id)sender;
 
 @end

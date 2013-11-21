@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74BBF3A7183D9FCF00AB1E3B /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBF3A6183D9FCF00AB1E3B /* MapaViewController.m */; };
+		74BBF3A9183D9FD500AB1E3B /* MapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */; };
 		DB9ACD28183957EB003CB03F /* Medico.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9ACD27183957EB003CB03F /* Medico.m */; };
 		DBEBEABE183D5B7B00DE406A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEBEABC183D5B7B00DE406A /* IndexViewController.m */; };
 		DBEBEABF183D5B7B00DE406A /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */; };
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74BBF3A5183D9FCF00AB1E3B /* MapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaViewController.h; sourceTree = "<group>"; };
+		74BBF3A6183D9FCF00AB1E3B /* MapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaViewController.m; sourceTree = "<group>"; };
+		74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapaViewController.xib; sourceTree = "<group>"; };
 		DB9ACD26183957EB003CB03F /* Medico.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Medico.h; sourceTree = "<group>"; };
 		DB9ACD27183957EB003CB03F /* Medico.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Medico.m; sourceTree = "<group>"; };
 		DBEBEABB183D5B7B00DE406A /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 		EB7DA2E91839562400B45B23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */,
 				DBEBEACF183D719D00DE406A /* RMDateSelectionViewController.xib */,
 				DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */,
 			);
@@ -181,6 +187,8 @@
 		EB7DA2EA1839562A00B45B23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				74BBF3A5183D9FCF00AB1E3B /* MapaViewController.h */,
+				74BBF3A6183D9FCF00AB1E3B /* MapaViewController.m */,
 				DBEBEACD183D719D00DE406A /* RMDateSelectionViewController.h */,
 				DBEBEACE183D719D00DE406A /* RMDateSelectionViewController.m */,
 				DBEBEABB183D5B7B00DE406A /* IndexViewController.h */,
@@ -265,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBEBEAD1183D719D00DE406A /* RMDateSelectionViewController.xib in Resources */,
+				74BBF3A9183D9FD500AB1E3B /* MapaViewController.xib in Resources */,
 				DBEBEABF183D5B7B00DE406A /* IndexViewController.xib in Resources */,
 				EB32A363183955240010E1D5 /* InfoPlist.strings in Resources */,
 				EB32A36B183955240010E1D5 /* Images.xcassets in Resources */,
@@ -291,6 +300,7 @@
 				DB9ACD28183957EB003CB03F /* Medico.m in Sources */,
 				DBEBEAD0183D719D00DE406A /* RMDateSelectionViewController.m in Sources */,
 				DBEBEABE183D5B7B00DE406A /* IndexViewController.m in Sources */,
+				74BBF3A7183D9FCF00AB1E3B /* MapaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

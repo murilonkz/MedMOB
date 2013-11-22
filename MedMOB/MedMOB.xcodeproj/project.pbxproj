@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7494D747183F8A9800B354E5 /* HospitalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7494D746183F8A9800B354E5 /* HospitalCell.m */; };
+		7494D749183F8AAB00B354E5 /* HospitalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7494D748183F8AAB00B354E5 /* HospitalCell.xib */; };
 		74BBF3A7183D9FCF00AB1E3B /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBF3A6183D9FCF00AB1E3B /* MapaViewController.m */; };
 		74BBF3A9183D9FD500AB1E3B /* MapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */; };
 		DBEBEABE183D5B7B00DE406A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEBEABC183D5B7B00DE406A /* IndexViewController.m */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7494D745183F8A9800B354E5 /* HospitalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalCell.h; sourceTree = "<group>"; };
+		7494D746183F8A9800B354E5 /* HospitalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalCell.m; sourceTree = "<group>"; };
+		7494D748183F8AAB00B354E5 /* HospitalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalCell.xib; sourceTree = "<group>"; };
 		74BBF3A5183D9FCF00AB1E3B /* MapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaViewController.h; sourceTree = "<group>"; };
 		74BBF3A6183D9FCF00AB1E3B /* MapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaViewController.m; sourceTree = "<group>"; };
 		74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapaViewController.xib; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 				DBEBEAEB183ED7E600DE406A /* HospitaisViewController.xib */,
 				74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */,
 				DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */,
+				7494D748183F8AAB00B354E5 /* HospitalCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				DBEBEABC183D5B7B00DE406A /* IndexViewController.m */,
 				DBEBEAE9183ED7E600DE406A /* HospitaisViewController.h */,
 				DBEBEAEA183ED7E600DE406A /* HospitaisViewController.m */,
+				7494D745183F8A9800B354E5 /* HospitalCell.h */,
+				7494D746183F8A9800B354E5 /* HospitalCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 				EB32A363183955240010E1D5 /* InfoPlist.strings in Resources */,
 				DBEBEAED183ED7E600DE406A /* HospitaisViewController.xib in Resources */,
 				EB32A36B183955240010E1D5 /* Images.xcassets in Resources */,
+				7494D749183F8AAB00B354E5 /* HospitalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +318,7 @@
 				EB32A369183955240010E1D5 /* AppDelegate.m in Sources */,
 				EB32A365183955240010E1D5 /* main.m in Sources */,
 				DBEBEAF0183F804C00DE406A /* Hospital.m in Sources */,
+				7494D747183F8A9800B354E5 /* HospitalCell.m in Sources */,
 				DBEBEABE183D5B7B00DE406A /* IndexViewController.m in Sources */,
 				74BBF3A7183D9FCF00AB1E3B /* MapaViewController.m in Sources */,
 				DBEBEAEC183ED7E600DE406A /* HospitaisViewController.m in Sources */,

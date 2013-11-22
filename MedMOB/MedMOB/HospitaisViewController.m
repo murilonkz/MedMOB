@@ -7,6 +7,8 @@
 //
 
 #import "HospitaisViewController.h"
+#import "HospitalCell.h"
+#import "MapaViewController.h"
 
 @interface HospitaisViewController ()
 
@@ -16,9 +18,12 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
+//        [self.tableView setTableHeaderView:[self headerView]];
+//        UINib *nib = [UINib nibWithNibName:@"HospitalCell" bundle:nil];
+//        [self.tableView registerNib:nib forCellReuseIdentifier:@"HospitalCell"];
     }
     return self;
 }
@@ -44,27 +49,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"HospitalCell";
+    HospitalCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if(cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HospitalCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
     // Configure the cell...
+    //Item *item = [[[DataSourceManager getDataSourceManager]allItems]objectAtIndex:[indexPath row]];
+    [[cell lblNome]setText:@"batata"];
+    [[cell lblDistancia]setText:@"100"];
+    
+    //[[cell imageView]setImage: [item img]];
+
     
     return cell;
 }
@@ -108,22 +120,21 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    MapaViewController *mapaViewController = [[MapaViewController alloc] initWithNibName:@"MapaViewController" bundle:nil];
+    [self presentViewController:mapaViewController animated:YES completion:nil];
 }
- 
- */
 
+
+- (void)ExibirMapaController
+{
+    MapaViewController *mvc = [[MapaViewController alloc]initWithNibName:@"MapaViewController" bundle:nil];
+    [self presentViewController:mvc animated:YES completion:nil];
+    NSLog(@"lolzinho");
+}
 @end

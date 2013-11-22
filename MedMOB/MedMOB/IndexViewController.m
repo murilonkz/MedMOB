@@ -7,11 +7,9 @@
 //
 
 #import "IndexViewController.h"
-#import "RMDateSelectionViewController.h"
-#import "MapaViewController.h"
 
 @interface IndexViewController ()
-
+@property NSArray *options;
 @end
 
 @implementation IndexViewController
@@ -20,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.options = @[@"Geral", @"Olhos"];
     }
     return self;
 }
@@ -37,30 +35,24 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)callModal:(id)sender {
-    RMDateSelectionViewController *dateSelectionVC = [RMDateSelectionViewController dateSelectionController];
-    dateSelectionVC.delegate = self;
-    
-    //You can enable or disable bouncing and motion effects
-    //dateSelectionVC.disableBouncingWhenShowing = YES;
-    //dateSelectionVC.disableMotionEffects = YES;
-    
-    [dateSelectionVC show];
-    
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1; // For one column
 }
 
-- (IBAction)mapa:(id)sender {
-    ViewController *map = [[ViewController alloc]init];
-    [map setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentViewController:map animated:YES completion:nil];
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [[self options] count]; // Numbers of rows
 }
 
-- (void)selectionViewController:(RMDateSelectionViewController *)vc didSelectOption:(NSString *)option {
-    NSLog(@"Opção selecionada: %@", option);
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [[self options] objectAtIndex:row]; // If it's a string
 }
 
-- (void)selectionViewControllerDidCancel:(RMDateSelectionViewController *)vc {
-    NSLog(@"Date selection was canceled");
+- (IBAction)emergencia:(id)sender {
 }
 
+- (IBAction)buscar:(id)sender {
+}
 @end

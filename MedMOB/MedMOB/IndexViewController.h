@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface IndexViewController : UIViewController
-- (IBAction)callModal:(id)sender;
-- (IBAction)mapa:(id)sender;
+- (IBAction)emergencia:(id)sender;
+- (IBAction)buscar:(id)sender;
+@property (weak, nonatomic) IBOutlet UIPickerView *opcao;
 
 @end

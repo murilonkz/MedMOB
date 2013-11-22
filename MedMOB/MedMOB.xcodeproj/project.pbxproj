@@ -13,6 +13,8 @@
 		DBEBEABE183D5B7B00DE406A /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEBEABC183D5B7B00DE406A /* IndexViewController.m */; };
 		DBEBEABF183D5B7B00DE406A /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */; };
 		DBEBEAD5183E5ECB00DE406A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBEBEAD4183E5ECB00DE406A /* MapKit.framework */; };
+		DBEBEAEC183ED7E600DE406A /* HospitaisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEBEAEA183ED7E600DE406A /* HospitaisViewController.m */; };
+		DBEBEAED183ED7E600DE406A /* HospitaisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBEBEAEB183ED7E600DE406A /* HospitaisViewController.xib */; };
 		EB32A359183955240010E1D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A358183955240010E1D5 /* Foundation.framework */; };
 		EB32A35B183955240010E1D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35A183955240010E1D5 /* CoreGraphics.framework */; };
 		EB32A35D183955240010E1D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB32A35C183955240010E1D5 /* UIKit.framework */; };
@@ -47,6 +49,9 @@
 		DBEBEABC183D5B7B00DE406A /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexViewController.xib; sourceTree = "<group>"; };
 		DBEBEAD4183E5ECB00DE406A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DBEBEAE9183ED7E600DE406A /* HospitaisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitaisViewController.h; sourceTree = "<group>"; };
+		DBEBEAEA183ED7E600DE406A /* HospitaisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitaisViewController.m; sourceTree = "<group>"; };
+		DBEBEAEB183ED7E600DE406A /* HospitaisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitaisViewController.xib; sourceTree = "<group>"; };
 		EB32A355183955240010E1D5 /* MedMOB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedMOB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB32A358183955240010E1D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EB32A35A183955240010E1D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,6 +181,7 @@
 		EB7DA2E91839562400B45B23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DBEBEAEB183ED7E600DE406A /* HospitaisViewController.xib */,
 				74BBF3A8183D9FD500AB1E3B /* MapaViewController.xib */,
 				DBEBEABD183D5B7B00DE406A /* IndexViewController.xib */,
 			);
@@ -189,6 +195,8 @@
 				74BBF3A6183D9FCF00AB1E3B /* MapaViewController.m */,
 				DBEBEABB183D5B7B00DE406A /* IndexViewController.h */,
 				DBEBEABC183D5B7B00DE406A /* IndexViewController.m */,
+				DBEBEAE9183ED7E600DE406A /* HospitaisViewController.h */,
+				DBEBEAEA183ED7E600DE406A /* HospitaisViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 				74BBF3A9183D9FD500AB1E3B /* MapaViewController.xib in Resources */,
 				DBEBEABF183D5B7B00DE406A /* IndexViewController.xib in Resources */,
 				EB32A363183955240010E1D5 /* InfoPlist.strings in Resources */,
+				DBEBEAED183ED7E600DE406A /* HospitaisViewController.xib in Resources */,
 				EB32A36B183955240010E1D5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +311,7 @@
 				DB9ACD28183957EB003CB03F /* Medico.m in Sources */,
 				DBEBEABE183D5B7B00DE406A /* IndexViewController.m in Sources */,
 				74BBF3A7183D9FCF00AB1E3B /* MapaViewController.m in Sources */,
+				DBEBEAEC183ED7E600DE406A /* HospitaisViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

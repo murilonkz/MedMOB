@@ -18,16 +18,20 @@
 
 @implementation HospitaisViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self setTitle: @"Resultados"];
+    }
+    return self;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    //
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        [self setTitle:@"Resultados"];
-        // Custom initialization
-//        [self.tableView setTableHeaderView:[self headerView]];
-//        UINib *nib = [UINib nibWithNibName:@"HospitalCell" bundle:nil];
-//        [self.tableView registerNib:nib forCellReuseIdentifier:@"HospitalCell"];
+        
     }
     return self;
 }
@@ -139,7 +143,6 @@
 - (void)ExibirMapaController
 {
     MapaViewController *mvc = [[MapaViewController alloc]initWithNibName:@"MapaViewController" bundle:nil];
-    [self presentViewController:mvc animated:YES completion:nil];
-    NSLog(@"lolzinho");
+    [self.navigationController pushViewController:mvc animated:YES];
 }
 @end

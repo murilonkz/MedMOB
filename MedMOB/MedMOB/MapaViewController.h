@@ -14,6 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
+@property (weak, nonatomic) IBOutlet UILabel *lblNomeHospital;
+@property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
+@property (weak, nonatomic) IBOutlet UILabel *lblTelefone;
+@property (weak, nonatomic) IBOutlet UILabel *lblHorarioAtend;
 
 @property NSArray* routes;
 

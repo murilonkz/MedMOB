@@ -134,7 +134,8 @@
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MapaViewController *mapaViewController = [[MapaViewController alloc] initWithNibName:@"MapaViewController" bundle:nil];
+
+    MapaViewController *mapaViewController = [[MapaViewController alloc] initWithNibName:@"MapaViewController" bundle:nil idHospital:indexPath.row];
     [self.navigationController pushViewController:mapaViewController animated:YES];
 //    [self presentViewController:mapaViewController animated:YES completion:nil];
 }

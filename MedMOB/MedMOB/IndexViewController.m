@@ -20,6 +20,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.options = @[@"Geral", @"Olhos"];
+
+
     }
     return self;
 }
@@ -60,4 +62,5 @@
     [self presentViewController:hvc animated:YES completion:nil];
 
 }
+
 @end

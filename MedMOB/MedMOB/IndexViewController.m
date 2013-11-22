@@ -9,6 +9,7 @@
 #import "IndexViewController.h"
 #import "MapaViewController.h"
 #import "HospitaisViewController.h"
+#import "SharedHospitais.h"
 
 @interface IndexViewController ()
 @property NSArray *options;
@@ -20,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.options = @[@"Geral", @"Olhos"];
+        self.options = @[@"Geral", @"Olhos", @"Emergencia"];
     }
     return self;
 }
@@ -61,7 +62,17 @@
 
 - (IBAction)buscar:(id)sender {
     
+    NSInteger row = [_opcao selectedRowInComponent:0];
+    NSString *selectOption = [self.options objectAtIndex:row];
+    NSLog(@"%@", selectOption);
+    
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF.especialidades contains[cd] %@",
+                                    selectOption];
+    [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
+    
     HospitaisViewController *hvc = [[HospitaisViewController alloc]initWithNibName:@"HospitaisViewController" bundle:nil];
     [self presentViewController:hvc animated:YES completion:nil];
+    
 }
 @end

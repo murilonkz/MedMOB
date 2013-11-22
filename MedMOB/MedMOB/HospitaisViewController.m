@@ -9,6 +9,8 @@
 #import "HospitaisViewController.h"
 #import "HospitalCell.h"
 #import "MapaViewController.h"
+#import "SharedHospitais.h"
+#import "Hospital.h"
 
 @interface HospitaisViewController ()
 
@@ -56,7 +58,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 10;
+    return [[[SharedHospitais sharedHospitais] searchItems]count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,8 +73,8 @@
     }
     
     // Configure the cell...
-    //Item *item = [[[DataSourceManager getDataSourceManager]allItems]objectAtIndex:[indexPath row]];
-    [[cell lblNome]setText:@"batata"];
+    Hospital *item = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:[indexPath row]];
+    [[cell lblNome]setText:[item nome]];
     [[cell lblDistancia]setText:@"100"];
     
     //[[cell imageView]setImage: [item img]];

@@ -52,13 +52,14 @@
 }
 
 - (IBAction)emergencia:(id)sender {
-    ViewController *mapa = [[ViewController alloc]init];
+    MapaViewController *mapa = [[MapaViewController alloc]init];
     [mapa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     [self presentViewController:mapa animated:YES completion:nil];
     
 }
 
 - (IBAction)buscar:(id)sender {
+    
     
 }
 @end

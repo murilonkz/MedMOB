@@ -8,6 +8,7 @@
 
 #import "SharedHospitais.h"
 #import "Hospital.h"
+#import "MapaViewController.h"
 
 @interface SharedHospitais(){
     NSMutableArray *allItems;
@@ -15,6 +16,7 @@
 @end
 
 @implementation SharedHospitais
+@synthesize searchItems;
 
 +(SharedHospitais *)sharedHospitais{
     static SharedHospitais *sharedHospitais = nil;
@@ -64,6 +66,17 @@
     [hospital setDistancy:20];
     
     [allItems addObject:hospital];
+}
+
+-(void)calculateAllDistancy{
+    Hospital *hospital = nil;
+    for (int count = 0; count < [searchItems count] ; count++) {
+        hospital = [searchItems objectAtIndex:count];
+        MapaViewController *mapa = [[MapaViewController alloc]init];
+        //(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino
+        [hospital setDistancy:[mapa CalcularDistancia:2 :2 :hospital.latitude :hospital.longitude]];
+        
+    }
 }
 
 

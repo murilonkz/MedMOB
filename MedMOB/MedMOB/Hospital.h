@@ -14,7 +14,7 @@
 @property NSString *nome;
 @property NSString *endereco;
 @property NSString *telefone;
-@property double *latitude;
-@property double *longitude;
+@property double latitude;
+@property double longitude;
 
 @end

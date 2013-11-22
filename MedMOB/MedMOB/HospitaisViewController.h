@@ -10,4 +10,6 @@
 
 @interface HospitaisViewController : UITableViewController
 
+- (void)ExibirMapaController;
+
 @end

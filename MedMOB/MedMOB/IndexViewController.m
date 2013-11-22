@@ -7,6 +7,7 @@
 //
 
 #import "IndexViewController.h"
+#import "HospitaisViewController.h"
 
 @interface IndexViewController ()
 @property NSArray *options;
@@ -54,5 +55,9 @@
 }
 
 - (IBAction)buscar:(id)sender {
+    HospitaisViewController *hvc = [[HospitaisViewController alloc]initWithNibName:@"HospitaisViewController" bundle:nil];
+    
+    [self presentViewController:hvc animated:YES completion:nil];
+
 }
 @end

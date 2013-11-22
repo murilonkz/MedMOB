@@ -19,4 +19,6 @@
 
 - (IBAction)getCurrentLocation:(id)sender;
 
+- (double)CalcularDistancia:(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino;
+
 @end

@@ -21,9 +21,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.options = @[@"Geral", @"Olhos"];
-
-
+        [self setTitle:@"Busca"];
+        self.options = @[@"Geral", @"Olhos", @"Emergencia"];
     }
     return self;
 }
@@ -58,7 +57,7 @@
 - (IBAction)emergencia:(id)sender {
     MapaViewController *mapa = [[MapaViewController alloc]init];
     [mapa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-    [self presentViewController:mapa animated:YES completion:nil];
+    [self.navigationController pushViewController:mapa animated: YES];
     
 }
 
@@ -73,8 +72,10 @@
                                     selectOption];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
     
-    HospitaisViewController *hvc = [[HospitaisViewController alloc]initWithNibName:@"HospitaisViewController" bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    
+    HospitaisViewController *hvc = [[HospitaisViewController alloc]init];
+    [self.navigationController pushViewController:hvc animated:YES];
+    
     
 }
 

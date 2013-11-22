@@ -22,6 +22,7 @@
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        [self setTitle:@"Resultados"];
         // Custom initialization
 //        [self.tableView setTableHeaderView:[self headerView]];
 //        UINib *nib = [UINib nibWithNibName:@"HospitalCell" bundle:nil];
@@ -129,7 +130,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MapaViewController *mapaViewController = [[MapaViewController alloc] initWithNibName:@"MapaViewController" bundle:nil];
-    [self presentViewController:mapaViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:mapaViewController animated:YES];
+//    [self presentViewController:mapaViewController animated:YES completion:nil];
 }
 
 

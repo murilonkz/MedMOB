@@ -20,6 +20,7 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
+    //
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         [self setTitle:@"Resultados"];

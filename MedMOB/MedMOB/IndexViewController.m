@@ -59,7 +59,6 @@
 
 - (IBAction)emergencia:(id)sender {
     MapaViewController *mapa = [[MapaViewController alloc]init];
-    [mapa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
     [self.navigationController pushViewController:mapa animated: YES];
     
 }

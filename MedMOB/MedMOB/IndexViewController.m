@@ -7,6 +7,7 @@
 //
 
 #import "IndexViewController.h"
+#import "MapaViewController.h"
 
 @interface IndexViewController ()
 @property NSArray *options;
@@ -51,8 +52,13 @@
 }
 
 - (IBAction)emergencia:(id)sender {
+    ViewController *mapa = [[ViewController alloc]init];
+    [mapa setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:mapa animated:YES completion:nil];
+    
 }
 
 - (IBAction)buscar:(id)sender {
+    
 }
 @end

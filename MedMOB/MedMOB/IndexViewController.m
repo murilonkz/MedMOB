@@ -20,9 +20,9 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    //
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        [self setTitle: @"Busca"];
         self.options = @[@"Geral", @"Olhos", @"Emergencia"];
 
 
@@ -79,7 +79,7 @@
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
     
     HospitaisViewController *hvc = [[HospitaisViewController alloc]initWithNibName:@"HospitaisViewController" bundle:nil];
-    [self presentViewController:hvc animated:YES completion:nil];
+    [self.navigationController pushViewController:hvc animated: YES];
     
 }
 

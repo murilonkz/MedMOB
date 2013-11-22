@@ -13,6 +13,7 @@
 - (NSArray *) allItems;
 
 @property NSArray *searchItems;
+-(void)calculateAllDistancy;
 
 
 @end

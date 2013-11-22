@@ -64,8 +64,8 @@
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"distancy" ascending:YES];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
     
-    MapaViewController *mapa = [[MapaViewController alloc]init];
-    [self.navigationController pushViewController:mapa animated: YES];
+    MapaViewController *mapaViewController = [[MapaViewController alloc] initWithNibName:@"MapaViewController" bundle:nil idHospital:0];
+    [self.navigationController pushViewController:mapaViewController animated: YES];
     
 }
 

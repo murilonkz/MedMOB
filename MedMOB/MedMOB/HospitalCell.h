@@ -11,6 +11,7 @@
 @interface HospitalCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblNome;
 @property (weak, nonatomic) IBOutlet UILabel *lblDistancia;
+@property (weak, nonatomic) IBOutlet UILabel *lblTelefone;
 - (IBAction)ExibirMapa:(id)sender;
 
 @end

@@ -49,6 +49,7 @@
     [hospital setEspecialidades:especialidades];
     [hospital setLatitude:-25.44406808028211];
     [hospital setLongitude:-49.2909513741314];
+    [hospital setDistancy:40];
     
     [allItems addObject:hospital];
     
@@ -60,6 +61,7 @@
     [hospital setEspecialidades:especialidades];
     [hospital setLatitude:-25.421037247040488];
     [hospital setLongitude:-49.29015309748387];
+    [hospital setDistancy:20];
     
     [allItems addObject:hospital];
 }

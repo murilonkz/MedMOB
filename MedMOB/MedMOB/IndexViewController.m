@@ -10,6 +10,7 @@
 #import "MapaViewController.h"
 #import "HospitaisViewController.h"
 #import "SharedHospitais.h"
+#import "Hospital.h"
 
 @interface IndexViewController ()
 @property NSArray *options;
@@ -21,7 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.options = @[@"Geral", @"Olhos"];
+        self.options = @[@"Geral", @"Olhos", @"Emergencia"];
 
 
     }
@@ -73,9 +74,13 @@
                                     selectOption];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
     
+    NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"distancy" ascending:YES];
+    [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
+    
     HospitaisViewController *hvc = [[HospitaisViewController alloc]initWithNibName:@"HospitaisViewController" bundle:nil];
     [self presentViewController:hvc animated:YES completion:nil];
     
 }
+
 
 @end

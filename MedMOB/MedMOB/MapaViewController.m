@@ -10,7 +10,7 @@
 #import "SharedHospitais.h"
 #import "Hospital.h"
 @interface MapaViewController ()
--(void) updateRouteView;
+
 @end
 
 @implementation MapaViewController {
@@ -18,7 +18,7 @@
     Hospital *hosp;
 }
 
-@synthesize latitudeLabel, longitudeLabel, mapa, routes, lineColor;
+@synthesize mapa;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp
 {
@@ -28,11 +28,6 @@
        hosp = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:idHosp];
         // Custom initialization
         [mapa setDelegate:self];
-        routeView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, mapa.frame.size.width, mapa.frame.size.height)];
-		routeView.userInteractionEnabled = NO;
-		[mapa addSubview:routeView];
-
-        
     }
     return self;
 }
@@ -83,49 +78,15 @@
     return coords;
 }
 
-//- (void)didReceiveMemoryWarning
-//{
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
-
-//- (IBAction)getCurrentLocation:(id)sender {
-//    locationManager.delegate = self;
-//    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//    
-//    [locationManager startUpdatingLocation];
-//}
-
-#pragma mark - CLLocationManagerDelegate
-
-//- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-//{
-//    NSLog(@"didFailWithError: %@", error);
-//    UIAlertView *errorAlert = [[UIAlertView alloc]
-//                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//    [errorAlert show];
-//}
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
-    
-//    if (currentLocation != nil)
-//    {
-//        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-//        latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-//        
-//        CLLocationCoordinate2D origem = CLLocationCoordinate2DMake(23.329404, 72.0039299);
-//        CLLocationCoordinate2D destino = CLLocationCoordinate2DMake(23.329404, 72.0039299);
-//    }
 }
 
 - (double)CalcularDistancia:(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino
 {
     return 6371 * acos(cos(M_PI * (90 - latOrigem )/180) * cos((90 - latDestino) * M_PI / 180) + sin((90- latOrigem) * M_PI / 180) * sin((90 - latDestino) * M_PI / 180) * cos((longDestino - longOrigem) * M_PI / 180)) * 1000;
 }
-
-
 
 @end

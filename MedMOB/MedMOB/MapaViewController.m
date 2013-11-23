@@ -43,6 +43,11 @@
     zoomLocation.latitude = hosp.latitude;
     zoomLocation.longitude= hosp.longitude;
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*1000, 0.5*1000);
+    MKPointAnnotation *annotationPoint2 = [[MKPointAnnotation alloc] init];
+    annotationPoint2.coordinate = zoomLocation;
+    annotationPoint2.title = [hosp nome];
+    annotationPoint2.subtitle = [hosp endereco];
+    [mapa addAnnotation:annotationPoint2];
     [mapa setRegion:viewRegion animated:YES];
 }
 

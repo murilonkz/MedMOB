@@ -96,8 +96,8 @@
                        @"Saúde Mental",
                        @"Urologia"];
     [hospital setEspecialidades:especialidades];
-    [hospital setLatitude:-25.432888];
-    [hospital setLongitude:-49.291878];
+    [hospital setLatitude:-25.434648707552316];
+    [hospital setLongitude:-49.29207059999999];
     [hospital setDistancy:20];
     
     [allItems addObject:hospital];

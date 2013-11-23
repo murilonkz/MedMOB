@@ -44,7 +44,33 @@
     mapa.showsUserLocation = YES;
     mapa.mapType = MKMapTypeHybrid;
     mapa.delegate = self;
-    [self.view addSubview:mapa];
+    //[self.view addSubview:mapa];
+    [self PegarPosicaoAtual];
+}
+
+-(NSMutableArray*)PegarPosicaoAtual
+{
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    if ([locationManager locationServicesEnabled])
+    {
+        locationManager.delegate = self;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        [locationManager startUpdatingLocation];
+        NSLog(@"HABILITADO");
+    }
+    
+    CLLocation *location = [locationManager location];
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    NSString *str=[[NSString alloc] initWithFormat:@" latitude:%f longitude:%f",coordinate.latitude,coordinate.longitude];
+    NSLog(@"%@",str);
+    
+    NSMutableArray *coords = [[NSMutableArray alloc] initWithCapacity:0];
+    [coords addObject:[NSNumber numberWithDouble:coordinate.latitude]];
+    [coords addObject:[NSNumber numberWithDouble:coordinate.longitude]];
+    
+    return coords;
 }
 
 - (void)didReceiveMemoryWarning

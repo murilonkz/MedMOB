@@ -7,19 +7,23 @@
 //
 
 #import "MapaViewController.h"
-
+#import "SharedHospitais.h"
+#import "Hospital.h"
 @interface MapaViewController ()
 
 @end
 
 @implementation MapaViewController {
     CLLocationManager *locationManager;
+    Hospital *hosp;
 }
 
 @synthesize latitudeLabel, longitudeLabel, mapa, routes;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp
 {
+    hosp = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:idHosp];
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -31,6 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _lblNomeHospital.text = [hosp nome];
+    _lblEndereco.text = [hosp endereco];
+    _lblTelefone.text = [hosp telefone];
+    
     // Do any additional setup after loading the view from its nib.
     locationManager = [[CLLocationManager alloc] init];
     //mapa = [[MKMapView alloc]initWithFrame:self.view.bounds];

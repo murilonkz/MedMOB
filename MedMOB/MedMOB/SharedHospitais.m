@@ -376,7 +376,6 @@
         hospital = [searchItems objectAtIndex:count];
         MapaViewController *mapa = [[MapaViewController alloc]init];
         NSMutableArray *pos = [mapa PegarPosicaoAtual];
-        NSLog(@"%f", [mapa CalcularDistancia:[[pos objectAtIndex:0]doubleValue] :[[pos objectAtIndex:1]doubleValue] :hospital.latitude :hospital.longitude]);
         double dist = [mapa CalcularDistancia:[[pos objectAtIndex:0]doubleValue] :[[pos objectAtIndex:1]doubleValue] :hospital.latitude :hospital.longitude];
         dist = dist / 1000;
         [hospital setDistancy:dist];

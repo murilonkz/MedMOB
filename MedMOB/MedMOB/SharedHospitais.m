@@ -22,7 +22,6 @@
     static SharedHospitais *sharedHospitais = nil;
     if (!sharedHospitais){
         sharedHospitais = [[super alloc]init];
-        
     }
     return  sharedHospitais;
 }

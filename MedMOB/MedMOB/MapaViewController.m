@@ -18,15 +18,14 @@
     Hospital *hosp;
 }
 
-@synthesize latitudeLabel, longitudeLabel, mapa, routes;
+@synthesize mapa, routes;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp
 {
-    hosp = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:idHosp];
-    
+
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+       hosp = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:idHosp];
     }
     return self;
 }
@@ -41,7 +40,7 @@
     
     // Do any additional setup after loading the view from its nib.
     locationManager = [[CLLocationManager alloc] init];
-    //mapa = [[MKMapView alloc]initWithFrame:self.view.bounds];
+    
     mapa.showsUserLocation = YES;
     mapa.mapType = MKMapTypeHybrid;
     mapa.delegate = self;
@@ -74,34 +73,7 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
-    CLLocation *currentLocation = newLocation;
-    
-    if (currentLocation != nil)
-    {
-        longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-        latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-        
-        CLLocationCoordinate2D origem = CLLocationCoordinate2DMake(23.329404, 72.0039299);
-        CLLocationCoordinate2D destino = CLLocationCoordinate2DMake(23.329404, 72.0039299);
-        
-        //[self CalcularRotaDe:origem Para:destino];
-        
-//        Place* home = [[Place alloc] init] ;
-//        home.name = @"Home";
-//        home.description = @"Sweet home";
-//        home.latitude = 23.329404;//[[(NSDictionary*)self.detailItem valueForKey:@"latitude"] floatValue];
-//        home.longitude = 72.0039299;//[[(NSDictionary*)self.detailItem valueForKey:@"longitude"] floatValue];
-//        
-//        Place* office = [[Place alloc] init] ;
-//        office.name = @"Office";
-//        office.description = @"Bad office";
-//        office.latitude = 23.329404;//[[(NSDictionary*)self.detailItem valueForKey:@"llatitude"] floatValue];
-//        office.longitude = 72.0039299;//[[(NSDictionary*)self.detailItem valueForKey:@"llongitude"] floatValue];;
-//        
-//        
-//        [self.mapa showRouteFrom:home to:office];
 
-    }
 }
 
 - (double)CalcularDistancia:(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino

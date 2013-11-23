@@ -11,19 +11,12 @@
 #import <MapKit/MapKit.h>
 
 @interface MapaViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
-@property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
 @property (weak, nonatomic) IBOutlet UILabel *lblNomeHospital;
 @property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
 @property (weak, nonatomic) IBOutlet UILabel *lblTelefone;
-@property (weak, nonatomic) IBOutlet UILabel *lblHorarioAtend;
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp;
-
 @property NSArray* routes;
-
-- (IBAction)getCurrentLocation:(id)sender;
-
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp;
 - (double)CalcularDistancia:(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino;
 
 @end

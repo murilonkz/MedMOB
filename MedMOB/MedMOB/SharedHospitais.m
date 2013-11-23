@@ -72,6 +72,7 @@
     for (int count = 0; count < [searchItems count] ; count++) {
         hospital = [searchItems objectAtIndex:count];
         MapaViewController *mapa = [[MapaViewController alloc]init];
+        mapa 
         //(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino
         [hospital setDistancy:[mapa CalcularDistancia:2 :2 :hospital.latitude :hospital.longitude]];
         

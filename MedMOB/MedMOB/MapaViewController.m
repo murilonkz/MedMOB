@@ -38,14 +38,12 @@
     _lblEndereco.text = [hosp endereco];
     _lblTelefone.text = [hosp telefone];
     
-    // Do any additional setup after loading the view from its nib.
-    locationManager = [[CLLocationManager alloc] init];
     
-    mapa.showsUserLocation = YES;
-    mapa.mapType = MKMapTypeHybrid;
-    mapa.delegate = self;
-    //[self.view addSubview:mapa];
-    [self PegarPosicaoAtual];
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = hosp.latitude;
+    zoomLocation.longitude= hosp.longitude;
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*1000, 0.5*1000);
+    [mapa setRegion:viewRegion animated:YES];
 }
 
 -(NSMutableArray*)PegarPosicaoAtual
@@ -62,7 +60,7 @@
     
     CLLocation *location = [locationManager location];
     CLLocationCoordinate2D coordinate = [location coordinate];
-    
+
     NSString *str=[[NSString alloc] initWithFormat:@" latitude:%f longitude:%f",coordinate.latitude,coordinate.longitude];
     NSLog(@"%@",str);
     

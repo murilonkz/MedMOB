@@ -76,8 +76,16 @@
 }
 
 - (IBAction)emergencia:(id)sender {
-    MapaViewController *mapa = [[MapaViewController alloc]init];
-    [self.navigationController pushViewController:mapa animated: YES];
+    NSPredicate *resultPredicate = [NSPredicate
+                                    predicateWithFormat:@"SELF.especialidades contains[cd] %@",
+                                    @"Emergencia"];
+    [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
+    [[SharedHospitais sharedHospitais]calculateAllDistancy];
+    NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"distancy" ascending:YES];
+    [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
+    
+    MapaViewController *mapaViewController = [[MapaViewController alloc] initWithNibName:@"MapaViewController" bundle:nil idHospital:0];
+    [self.navigationController pushViewController:mapaViewController animated: YES];
     
 }
 
@@ -85,13 +93,12 @@
     
     NSInteger row = [_opcao selectedRowInComponent:0];
     NSString *selectOption = [self.options objectAtIndex:row];
-    NSLog(@"%@", selectOption);
     
     NSPredicate *resultPredicate = [NSPredicate
                                     predicateWithFormat:@"SELF.especialidades contains[cd] %@",
                                     selectOption];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
-    
+    [[SharedHospitais sharedHospitais]calculateAllDistancy];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"distancy" ascending:YES];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
     

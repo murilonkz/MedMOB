@@ -72,9 +72,9 @@
     for (int count = 0; count < [searchItems count] ; count++) {
         hospital = [searchItems objectAtIndex:count];
         MapaViewController *mapa = [[MapaViewController alloc]init];
-        mapa 
-        //(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino
-        [hospital setDistancy:[mapa CalcularDistancia:2 :2 :hospital.latitude :hospital.longitude]];
+        NSMutableArray *pos = [mapa PegarPosicaoAtual];
+        NSLog(@"%f", [mapa CalcularDistancia:[[pos objectAtIndex:0]doubleValue] :[[pos objectAtIndex:1]doubleValue] :hospital.latitude :hospital.longitude]);
+        [hospital setDistancy:[mapa CalcularDistancia:[[pos objectAtIndex:0]doubleValue] :[[pos objectAtIndex:1]doubleValue] :hospital.latitude :hospital.longitude]];
         
     }
 }

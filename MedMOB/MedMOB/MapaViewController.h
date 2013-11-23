@@ -18,5 +18,6 @@
 @property NSArray* routes;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp;
 - (double)CalcularDistancia:(double)latOrigem : (double)longOrigem : (double)latDestino : (double)longDestino;
+-(NSMutableArray*)PegarPosicaoAtual;
 
 @end

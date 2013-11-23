@@ -60,7 +60,7 @@
                                     predicateWithFormat:@"SELF.especialidades contains[cd] %@",
                                     @"Emergencia"];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
-    
+    [[SharedHospitais sharedHospitais]calculateAllDistancy];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"distancy" ascending:YES];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
     
@@ -78,7 +78,7 @@
                                     predicateWithFormat:@"SELF.especialidades contains[cd] %@",
                                     selectOption];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]allItems] filteredArrayUsingPredicate:resultPredicate]];
-    
+    [[SharedHospitais sharedHospitais]calculateAllDistancy];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"distancy" ascending:YES];
     [[SharedHospitais sharedHospitais]setSearchItems: [[[SharedHospitais sharedHospitais]searchItems] sortedArrayUsingDescriptors:@[sd]]];
     

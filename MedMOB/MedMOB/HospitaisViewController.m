@@ -23,6 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self setTitle: @"Resultados"];
+        [[self tableView]setRowHeight:92];
     }
     return self;
 }
@@ -81,8 +82,8 @@
     // Configure the cell...
     Hospital *item = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:[indexPath row]];
     [[cell lblNome]setText:[item nome]];
-    [[cell lblDistancia]setText:@"100"];
-    
+    [[cell lblDistancia]setText:[NSString stringWithFormat:@"%.02f",[item distancy]]];
+    [[cell lblTelefone]setText:[item telefone]];
     //[[cell imageView]setImage: [item img]];
 
     

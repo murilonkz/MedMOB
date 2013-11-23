@@ -23,7 +23,25 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self setTitle: @"Busca"];
-        self.options = @[@"Geral", @"Olhos", @"Emergencia"];
+        self.options = @[@"Clínica Geral",
+                         @"Dermatologia",
+                         @"Emergencia",
+                         @"Endocrinologia",
+                         @"Oftalmologia",
+                         @"Pediatria",
+                         @"Cardiologia",
+                         @"Geriatria",
+                         @"Ginecologia",
+                         @"Neurologia",
+                         @"Oftalmologia",
+                         @"Oncologia",
+                         @"Ortopedia",
+                         @"Otorrinolaringologia",
+                         @"Pediatria",
+                         @"Pneumonologia",
+                         @"Reumatologia",
+                         @"Saúde Mental",
+                         @"Urologia"];
 
 
     }

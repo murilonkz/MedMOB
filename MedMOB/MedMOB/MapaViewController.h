@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
 @property (weak, nonatomic) IBOutlet UILabel *lblTelefone;
 @property NSArray* routes;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp;
 
 @property (nonatomic, retain) UIColor* lineColor;
 

@@ -25,6 +25,7 @@
 
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+       hosp = [[[SharedHospitais sharedHospitais]searchItems]objectAtIndex:idHosp];
         // Custom initialization
         [mapa setDelegate:self];
         routeView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, mapa.frame.size.width, mapa.frame.size.height)];
@@ -44,15 +45,17 @@
     _lblEndereco.text = [hosp endereco];
     _lblTelefone.text = [hosp telefone];
     
-    // Do any additional setup after loading the view from its nib.
-    locationManager = [[CLLocationManager alloc] init];
-    //mapa = [[MKMapView alloc]initWithFrame:self.view.bounds];
-    mapa.showsUserLocation = YES;
-    mapa.mapType = MKMapTypeHybrid;
-    mapa.delegate = self;
-    //[self.view addSubview:mapa];
-    [self PegarPosicaoAtual];
     
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = hosp.latitude;
+    zoomLocation.longitude= hosp.longitude;
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 0.5*1000, 0.5*1000);
+    MKPointAnnotation *annotationPoint2 = [[MKPointAnnotation alloc] init];
+    annotationPoint2.coordinate = zoomLocation;
+    annotationPoint2.title = [hosp nome];
+    annotationPoint2.subtitle = [hosp endereco];
+    [mapa addAnnotation:annotationPoint2];
+    [mapa setRegion:viewRegion animated:YES];
     routes = [self CalcularRota];
     [self updateRouteView];
     [self centerMap];

@@ -11,6 +11,9 @@
 #import <MapKit/MapKit.h>
 
 @interface MapaViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+{
+	UIImageView* routeView;
+}
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (strong, nonatomic) IBOutlet MKMapView *mapa;
@@ -21,6 +24,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil idHospital:(NSInteger *)idHosp;
 
 @property NSArray* routes;
+
+@property (nonatomic, retain) UIColor* lineColor;
 
 - (IBAction)getCurrentLocation:(id)sender;
 
